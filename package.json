@@ -1,5 +1,5 @@
 {
-  "name": "undoredo",
+  "name": "redoundo",
   "version": "0.1.0",
   "description": "Simple undo/redo functionality for Java(Type)Script",
   "repository": {
