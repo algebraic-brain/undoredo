@@ -1,6 +1,6 @@
 {
   "name": "undoredo",
-  "version": "0.1.6",
+  "version": "0.1.0",
   "description": "Simple undo/redo functionality for Java(Type)Script",
   "repository": {
     "type": "git",
