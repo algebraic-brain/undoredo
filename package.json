@@ -1,0 +1,39 @@
+{
+  "name": "undoredo",
+  "version": "0.1.6",
+  "description": "Simple undo/redo functionality for Java(Type)Script",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/algebraic-brain/undoredo"
+  },
+  "license": "MIT",
+  "keywords": [
+    "undo",
+    "redo",
+    "library"
+  ],
+  "main": "dist/undoredo.js",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "bundle": "rollup -c -i src/undoredo.ts -o dist/undoredo.js -m -f umd -n undoredo",
+    "build": "npm run bundle && npm run minify",
+    "minify:terser": "terser -c -m -o dist/undoredo.js dist/undoredo.js",
+    "minify": "npm run minify:terser",
+    "test": "jest"
+  },
+  "author": "Osman Bineev",
+  "devDependencies": {
+    "@types/jest": "^23.3.9",
+    "jest": "^23.6.0",
+    "rollup": "^0.67.0",
+    "rollup-plugin-gzip": "^2.0.0",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-typescript2": "^0.17.2",
+    "terser": "^3.10.11",
+    "ts-jest": "^23.10.4",
+    "typescript": "^3.0.1"
+  }
+}
