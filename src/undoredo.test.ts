@@ -1,4 +1,5 @@
-import Hist from './undoredo'
+import Hist from './undoredo';
+import "jest";
 
 test("`hist.UndoLength` should be 0 after `add` to zero-size history", ()=>{
     let hist = new Hist(0);
