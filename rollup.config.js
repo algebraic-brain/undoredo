@@ -7,6 +7,7 @@ export default {
     plugins: [
         typescript({
             typescript: require('typescript'),
+            tsconfig:   "./tsconfig.rollup.json"
         }),
         resolve(),
         terser(),
