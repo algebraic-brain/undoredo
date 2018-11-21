@@ -1,5 +1,4 @@
-import Hist from './undoredo';
-import "jest";
+let { default: Hist } = require('./dist/undoredo');
 
 test("`hist.UndoLength` should be 0 after `add` to zero-size history", ()=>{
     let hist = new Hist(0);

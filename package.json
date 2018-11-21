@@ -1,6 +1,6 @@
 {
   "name": "redoundo",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Simple undo/redo functionality for Java(Type)Script",
   "repository": {
     "type": "git",
@@ -12,27 +12,28 @@
     "redo",
     "library"
   ],
-  "main": "dist/undoredo.js",
+  "main": "dist/undoredo.umd.js",
+  "module": "dist/undoredo.es.js",
+  "typings": "dist/undoredo.d.ts",
   "files": [
     "dist",
     "src"
   ],
   "scripts": {
-    "bundle:lib": "tsc",
-    "bundle:min": "rollup -c -i src/undoredo.ts -o dist/undoredo.min.js -m -f umd -n undoredo",
-    "build": "npm run bundle:lib && npm run bundle:min",
-    "test": "jest"
+    "build:es": "rollup -c -i src/undoredo.ts -o dist/undoredo.es.js -m -f es -n undoredo",
+    "build:umd": "rollup -c -i src/undoredo.ts -o dist/undoredo.umd.js -m -f umd -n undoredo",
+    "build:min": "rollup -c rollup.config.minify.js -i src/undoredo.ts -o dist/undoredo.min.js -m -f umd -n undoredo",
+    "build": "npm run build:es && npm run build:umd && npm run build:min",
+    "test": "tsc -p tsconfig.test.json && jest --coverage"
   },
   "author": "Osman Bineev",
   "devDependencies": {
-    "@types/jest": "^23.3.9",
     "jest": "^23.6.0",
     "rollup": "^0.67.0",
     "rollup-plugin-gzip": "^2.0.0",
     "rollup-plugin-node-resolve": "^3.4.0",
     "rollup-plugin-terser": "^3.0.0",
     "rollup-plugin-typescript2": "^0.17.2",
-    "ts-jest": "^23.10.4",
     "typescript": "^3.0.1"
   }
 }

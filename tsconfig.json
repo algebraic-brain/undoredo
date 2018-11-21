@@ -1,8 +1,7 @@
 {
     "compilerOptions": {
       "target": "es5",
-      "module": "commonjs",
-      "outDir": "./dist",
+      "module": "esnext",
       "declaration": true,
       "sourceMap": true,
       "moduleResolution": "node",
@@ -11,12 +10,4 @@
           "es6"
       ]
     },
-    
-    "include": [
-        "src/**/*"
-    ],
-
-    "exclude": [
-        "src/**/*.test.ts"
-    ]
 }
