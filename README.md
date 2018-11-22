@@ -2,6 +2,8 @@
 
 Simple undo/redo functionality for Java(Type)Script
 
+[See online demo](https://codepen.io/algebrain/pen/yQvwEq)
+
 # `jest` example
 
 ```typescript
