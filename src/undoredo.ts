@@ -1,8 +1,12 @@
+/** Record of actions history. */
 export type Record = {
+    /** What will be done. */
     Redo: ()=>void;
+    /** What will be undone then. */
     Undo: ()=>void;
 }
 
+/** Class that implements all functionality of history. */
 export default class Hist {
     private depth_:  number;
     private list_:   Record[];
@@ -17,6 +21,7 @@ export default class Hist {
     get UndoLength() { return this.list_.length - this.offset_ }
     get RedoLength() { return this.offset_; }
 
+    /** Add new record to a history, then `r.Redo()` will be called automatically. */
     add(r: Record) {
         let lst = this.list_.slice(0, this.list_.length-this.offset_);
         if (lst.length === this.depth_) {
@@ -29,6 +34,7 @@ export default class Hist {
         r.Redo();
     }
 
+    /** Undo the last record in a history. */
     undo () {
         if (this.list_.length) {
             let maxOffset = this.list_.length-1;
@@ -39,6 +45,7 @@ export default class Hist {
         }
     }
 
+    /** Redo last undone record and return it back to the history. */
     redo() {
         if (this.list_.length) {
             let maxOffset = this.list_.length-1;
@@ -49,6 +56,7 @@ export default class Hist {
         }
     }
 
+    /** Clean the history. */
     clean() {
         this.list_ = [];
         this.offset_ = 0;
