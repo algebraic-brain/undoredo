@@ -18,7 +18,9 @@ export default class Hist {
         this.offset_ = 0;    
     }
 
+    /** Length of undoing history. */
     get UndoLength() { return this.list_.length - this.offset_ }
+    /** Length of redoing history. */
     get RedoLength() { return this.offset_; }
 
     /** Add new record to a history, then `r.Redo()` will be called automatically. */
