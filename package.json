@@ -1,6 +1,6 @@
 {
   "name": "redoundo",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "description": "Simple undo/redo functionality for Java(Type)Script",
   "repository": {
     "type": "git",
@@ -28,12 +28,12 @@
   },
   "author": "Osman Bineev",
   "devDependencies": {
-    "jest": "^23.6.0",
-    "rollup": "^0.67.0",
-    "rollup-plugin-gzip": "^2.0.0",
-    "rollup-plugin-node-resolve": "^3.4.0",
-    "rollup-plugin-typescript2": "^0.17.2",
-    "rollup-plugin-uglify": "^6.0.0",
-    "typescript": "^3.0.1"
+    "jest": "^24.5.0",
+    "rollup": "^1.6.0",
+    "rollup-plugin-gzip": "^2.2.0",
+    "rollup-plugin-node-resolve": "^4.0.1",
+    "rollup-plugin-typescript2": "^0.20.1",
+    "rollup-plugin-uglify": "^6.0.2",
+    "typescript": "^3.3.3333"
   }
 }
