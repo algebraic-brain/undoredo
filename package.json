@@ -1,6 +1,6 @@
 {
   "name": "redoundo",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "description": "Simple undo/redo functionality for Java(Type)Script",
   "repository": {
     "type": "git",
